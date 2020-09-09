@@ -31,8 +31,8 @@ class HiddenMarkovModel:
 
         self.states = np.array(states)
         self.observations = np.array(observations)
-        self.num_states = states.shape[0]
-        self.num_observations = observations.shape[0]
+        self.num_states = self.states.shape[0]
+        self.num_observations = self.observations.shape[0]
         self.tp = np.array(tp)
         self.ep = np.array(ep)
         self.pi = np.array(pi)
@@ -191,7 +191,7 @@ class HiddenMarkovModel:
                 o_t1 = self._get_observation_idx(obs[t+1])
                 for i in range(self.num_states):
                     xi[i, :, t] = alpha[i, t] * self.tp[i, :] \
-                                    * B[:, o_t1] * beta[:, t+1]
+                                    * self.ep[:, o_t1] * beta[:, t+1]
             xi /= xi.sum(axis=(0, 1))
 
             # maximization step

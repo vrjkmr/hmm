@@ -21,7 +21,6 @@ class HMM:
         emission probability matrix of shape N x M
     initial : numpy.ndarray
         initial probability distribution of size N over states
-
     """
 
     def __init__(self, Q, V, A, B, initial):

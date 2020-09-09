@@ -69,7 +69,7 @@ class HMM:
         return prob, beta
 
     def decode(self, obs):
-        """Determine the best hidden state sequence given an observation."""
+        """Determine the best hidden sequence using the Viterbi algorithm."""
         T = len(obs)
         delta = np.zeros((self.N, T))
         # initialization

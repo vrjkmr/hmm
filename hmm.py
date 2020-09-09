@@ -61,7 +61,7 @@ class HiddenMarkovModel:
         Parameters
         ----------
         obs : array_like or numpy ndarray
-            Sequence of observations (of size T).
+            Sequence of observations of size T.
 
         Returns
         -------
@@ -96,7 +96,7 @@ class HiddenMarkovModel:
         Parameters
         ----------
         obs : array_like or numpy ndarray
-            Sequence of observations (of size T).
+            Sequence of observations of size T.
 
         Returns
         -------
@@ -131,7 +131,7 @@ class HiddenMarkovModel:
         Parameters
         ----------
         obs : array_like or numpy ndarray
-            Sequence of observations (of size T).
+            Sequence of observations of size T.
 
         Returns
         -------
@@ -171,7 +171,7 @@ class HiddenMarkovModel:
         Parameters
         ----------
         obs : array_like or numpy ndarray
-            Sequence of observations (of size T).
+            Sequence of observations of size T.
 
         iterations : int, optional
             Number of Expectation-Maximization (EM) iterations.

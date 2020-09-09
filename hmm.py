@@ -198,7 +198,7 @@ class HiddenMarkovModel:
             self.pi = gamma[:, 0]
             self.tp = xi.sum(axis=2) / gamma[:, :-1].sum(axis=1).reshape(-1, 1)
             for idx, o in enumerate(self.observations):
-                indices = np.argwhere(obs == o).ravel()
+                indices = np.argwhere(obs == o).flatten()
                 self.ep[:, idx] = gamma[:, indices].sum(axis=1) \
                     / gamma.sum(axis=1)
 

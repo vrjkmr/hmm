@@ -180,7 +180,6 @@ class HiddenMarkovModel:
         """
 
         for _ in range(iterations):
-
             T = len(obs)
 
             # expectation step

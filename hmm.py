@@ -22,16 +22,6 @@ class HMM:
     initial : numpy.ndarray
         initial probability distribution of size N over states
 
-    Methods
-    -------
-    likelihood(obs):
-        Computes the likelihood of an observation sequence.
-    likelihood_forward(obs):
-        Computes the observation likelihood using the forward algorithm.
-    likelihood_backward(obs):
-        Computes the observation likelihood using the backward algorithm.
-    decode(obs):
-        Determines the best hidden sequence using the Viterbi algorithm.
     """
 
     def __init__(self, Q, V, A, B, initial):

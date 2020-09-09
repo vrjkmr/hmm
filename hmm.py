@@ -21,6 +21,17 @@ class HMM:
         emission probability matrix of shape N x M
     initial : numpy.ndarray
         initial probability distribution of size N over states
+
+    Methods
+    -------
+    likelihood(obs):
+        Computes the likelihood of an observation sequence.
+    likelihood_forward(obs):
+        Computes the observation likelihood using the forward algorithm.
+    likelihood_backward(obs):
+        Computes the observation likelihood using the backward algorithm.
+    decode(obs):
+        Determines the best hidden sequence using the Viterbi algorithm.
     """
 
     def __init__(self, Q, V, A, B, initial):
@@ -34,12 +45,12 @@ class HMM:
         self.initial = initial
 
     def likelihood(self, obs):
-        """Compute the likelihood of an observation."""
+        """Compute the likelihood of an observation sequence."""
         prob, _ = self.likelihood_forward(obs)
         return prob
 
     def likelihood_forward(self, obs):
-        """Compute observation likelihood using the Forward algorithm."""
+        """Compute observation likelihood using the forward algorithm."""
         T = len(obs)
         alpha = np.zeros((self.N, T))
         # initialization
@@ -54,7 +65,7 @@ class HMM:
         return prob, alpha
 
     def likelihood_backward(self, obs):
-        """Compute observation likelihood using the Backward algorithm."""
+        """Compute observation likelihood using the backward algorithm."""
         T = len(obs)
         beta = np.zeros((self.N, T))
         # initialization

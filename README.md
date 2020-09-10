@@ -1,6 +1,17 @@
 # Hidden Markov Models
 
-This repository contains the code for a Hidden Markov Model (HMM) built from scratch (using Numpy). The code addresses the three fundamental problems of HMMs: **likelihood**, **decoding**, and **learning**.
+This repository contains the code for a Hidden Markov Model (HMM) built from scratch (using Numpy). The code addresses the three fundamental tasks of HMMs: **likelihood**, **decoding**, and **learning**.
+
+### Project structure
+
+This project is organised as follows.
+
+```
+.
+├── Hidden Markov Model.ipynb           # notebook to display HMM features
+├── hmm.py                              # script containing the core HMM class
+└── README.md
+```
 
 ### Usage
 
@@ -19,30 +30,19 @@ model = HiddenMarkovModel(states, observations, transition_probs,
                           emission_probs, initial_probs)
 ```
 
-Once instantiated, the three HMM problems can be addressed using three simple function calls.
+Once instantiated, the three HMM tasks can be addressed using three simple function calls.
 
 ```python
 observation_sequence = [1, 2, 3, 2, 2, 1, 2]
 
-# likelihood : compute likelihood of an observation sequence
+# task 1 : likelihood (compute likelihood of an observation sequence)
 prob = model.likelihood(observation_sequence)
 
-# decoding : find the most likely hidden state sequence for an observation sequence
+# task 2 : decoding (find the most likely hidden state sequence for an observation sequence)
 path, prob = model.decode(observation_sequence)
 
-# learning : learn HMM parameters given an observation sequence
+# task 3 : learning (learn HMM parameters given an observation sequence)
 model.learn(observation_sequence, iterations=1)
-```
-
-### Project structure
-
-This project is organised as follows.
-
-```
-.
-├── Hidden Markov Model.ipynb           # notebook to display HMM features
-├── hmm.py                              # script containing the core HMM class
-└── README.md
 ```
 
 ### References

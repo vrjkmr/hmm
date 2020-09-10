@@ -1,4 +1,4 @@
-# Hidden Markov Model
+# Hidden Markov Models
 
 This repository contains the code for a Hidden Markov Model (HMM) built from scratch (using Numpy). The code addresses the three fundamental problems of HMMs: **likelihood**, **decoding**, and **learning**.
 

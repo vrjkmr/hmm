@@ -45,7 +45,7 @@ path, prob = model.decode(observation_sequence)
 model.learn(observation_sequence, iterations=1)
 ```
 
-### References
+### Acknowledgements
 
 - [Hidden Markov Models](https://web.stanford.edu/~jurafsky/slp3/A.pdf) by Daniel Jurafsky & James H. Martin
 - YouTube playlist on [HMMs](https://www.youtube.com/watch?v=J_y5hx_ySCg&list=PLix7MmR3doRo3NGNzrq48FItR3TDyuLCo&ab_channel=djp3) by Prof. Donald J. Patterson

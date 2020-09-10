@@ -141,9 +141,6 @@ class HiddenMarkovModel:
         prob : float
             Probability likelihood for observation sequence along path.
 
-        delta : numpy ndarray
-            Viterbi matrix of shape (num_states x T).
-
         """
 
         T = len(obs)
@@ -163,7 +160,7 @@ class HiddenMarkovModel:
         path = self.states[delta.argmax(axis=0)]
         prob = delta[:, T-1].max()
 
-        return path, prob, delta
+        return path, prob
 
     def learn(self, obs, iterations=1):
         """Learn parameters from an observation sequence.

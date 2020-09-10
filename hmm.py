@@ -163,7 +163,7 @@ class HiddenMarkovModel:
         return path, prob
 
     def learn(self, obs, iterations=1):
-        """Learn parameters from an observation sequence.
+        """Learn parameters from an observation sequence using Baum-Welch.
 
         Parameters
         ----------

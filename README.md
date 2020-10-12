@@ -17,9 +17,9 @@ This project is organised as follows.
 
 The `HiddenMarkovModel` class is defined in `hmm.py`. To instantiate it, simply define the state space, the observation space, and initialized model parameters (transition probabilities, emission probabilities, and initial probabilities).
 
-Below is an example Hidden Markov model instantiated using the HMM class. The hidden states are the weather outdoors (hot or cold), and the observations are the number of ice creams eaten by a certain individual (1, 2, or 3).
+Below is an example model instantiated using the `HiddenMarkovModel` class. The hidden states are the weather outdoors (hot or cold), and the observations are the number of ice creams eaten by a certain individual (1, 2, or 3).
 
-![](https://i.imgur.com/UChN8yO.png)
+![](https://i.imgur.com/Wx2Eq1E.png)
 
 ```python
 from hmm import HiddenMarkovModel
